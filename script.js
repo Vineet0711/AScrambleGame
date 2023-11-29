@@ -17,7 +17,7 @@ createWord= (words)=>{
 ModifyWord=(word)=>{
     for(let i=word.length-1;i>=0;i--){
         let t= word[i];
-        let j = Math.floor(Math.random(i+1));
+        let j = Math.floor(Math.random()*(i+1));
         word[i]=word[j];
         word[j]=t;
     }
@@ -44,7 +44,7 @@ fun=()=>{
             guess.value="";
         }
         else{
-            msg.innerHTML=`It's incorrect. Please try again.${word}`;
+            msg.innerHTML=`It's incorrect. Please try again.${modifiedWord}`;
             guess.value="";
         }
     }
